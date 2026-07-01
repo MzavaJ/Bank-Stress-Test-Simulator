@@ -122,7 +122,7 @@ def style(val):
     if val == "PASS":   return "background-color:#d4efdf; color:green; font-weight:bold"
     if val == "BREACH": return "background-color:#ffd6d6; color:red;   font-weight:bold"
     return ""
-st.dataframe(pivot.style.map(style), use_container_width=True)
+st.dataframe(pivot.style.map(style), width='stretch')
 
 # Pass / Fail — LCR
 st.subheader("LCR Pass / Fail Summary")
@@ -134,7 +134,7 @@ for p in [0] + shock_pcts:
         lcr_rows.append({"Scenario": label, "Bank": row["bank_name"],
                          "Status": "PASS" if row[col] >= LCR_MINIMUM else "BREACH"})
 lcr_pivot = pd.DataFrame(lcr_rows).pivot(index="Bank", columns="Scenario", values="Status")
-st.dataframe(lcr_pivot.style.map(style), use_container_width=True)
+st.dataframe(lcr_pivot.style.map(style), width='stretch')
 
 # Additional Shock Narratives
 st.subheader("Additional Shock Narratives")
