@@ -137,9 +137,9 @@ obligations under the shock. Falling below 100% signals liquidity-crunch risk.
 
 def pass_fail_banner(passed, min_label):
     if passed:
-        st.success(f"✅ Passes the {min_label} minimum.")
+        st.success(f" Passes the {min_label} minimum.")
     else:
-        st.error(f"❌ Breaches the {min_label} minimum.")
+        st.error(f"Breaches the {min_label} minimum.")
 
 
 # Detail renderers — plain-language breakdown for a clicked bar.
