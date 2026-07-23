@@ -10,8 +10,14 @@ LGD          = 0.50
 
 st.set_page_config(page_title="Bank Stress Test", layout="wide")
 st.title("FL-02 Bank Stress Test Simulator")
-st.caption("Bank of Tanzania · CAR >= 12% | LCR >= 100% (HQLA / Net Cash Outflows)")
-st.caption("Click a chart card below to open it in a popup. Inside the popup, click a bar for a plain-language breakdown.")
+st.markdown(
+    "<p style='font-size:16px; color:gray;'>Bank of Tanzania · CAR >= 12% | LCR >= 100% (HQLA / Net Cash Outflows)</p>",
+    unsafe_allow_html=True,
+)
+st.markdown(
+    "<p style='font-size:16px; color:gray;'>Click a chart card below to open it in a popup. Inside the popup, click a bar for a plain-language breakdown.</p>",
+    unsafe_allow_html=True,
+)
 st.markdown(
     "<p style='font-size:18px'><b>Columns used:</b> "
     "<code>bank_name</code>, <code>tier1_capital_bn_tzs</code>, <code>tier2_capital_bn_tzs</code>, "
