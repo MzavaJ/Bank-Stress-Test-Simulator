@@ -12,6 +12,11 @@ st.set_page_config(page_title="Bank Stress Test", layout="wide")
 st.title("FL-02 Bank Stress Test Simulator")
 st.caption("Bank of Tanzania · CAR >= 12% | LCR >= 100% (HQLA / Net Cash Outflows)")
 st.caption("Click a chart card below to open it in a popup. Inside the popup, click a bar for a plain-language breakdown.")
+st.caption(
+    "Columns used: `bank_name`, `tier1_capital_bn_tzs`, `tier2_capital_bn_tzs`, "
+    "`performing_loans_bn_tzs`, `npl_bn_tzs`, `credit_rwa_bn_tzs`, `market_rwa_bn_tzs`, "
+    "`operational_rwa_bn_tzs`, `hqla_bn_tzs`, `net_cash_outflows_bn_tzs`, `car_baseline_pct`"
+)
 
 # Sidebar
 with st.sidebar:
@@ -21,7 +26,7 @@ with st.sidebar:
     micro_shock   = st.slider("Micro-loan Default Increase (%)", 0, 50, 20, 5)
 
 
-# Load data (no bundled sample dataset — user must upload a file)
+# Load data (user must upload a file)
 # Dialog / chart-click interactions trigger a full script rerun, and on some
 # reruns st.file_uploader can momentarily return None even though a file was
 # already uploaded. To make the app resilient to that, we cache the raw
@@ -36,7 +41,7 @@ if uploaded_file is not None:
 
 uploaded_cache = st.session_state.get("_uploaded")
 if not uploaded_cache:
-    st.info("Please upload a CSV or TSV file in the sidebar to begin.")
+    st.info("Please upload a CSV or TSV file in the sidebar to begin. with the following metrics")
     st.stop()
 
 with st.status("Loading dataset...", expanded=False) as load_status:
