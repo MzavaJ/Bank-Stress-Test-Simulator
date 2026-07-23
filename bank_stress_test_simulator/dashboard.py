@@ -85,12 +85,12 @@ depositors.
 
 **Formula:** CAR = (Tier 1 Capital + Tier 2 Capital) ÷ Risk-Weighted Assets × 100
 
-- **Tier 1 & Tier 2 Capital** — the bank's own cushion (shareholder funds,
-  retained earnings, and similar buffers).
+- **Tier 1 & Tier 2 Capital** — the bank's own money (shareholder funds,
+  retained earnings, and similar buffers) that can absorve losses and keep the bank running.
 - **Risk-Weighted Assets (RWA)** — the bank's loans and other assets, adjusted
   for how risky they are.
 
-The **Bank of Tanzania requires CAR ≥ 12%**. Think of it like an airbag: the
+The **Bank of Tanzania requires CAR ≥ 12%**.The
 bigger the CAR, the more room a bank has to absorb bad loans before it
 becomes undercapitalized.
 """
