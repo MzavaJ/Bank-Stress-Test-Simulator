@@ -13,9 +13,12 @@ st.title("FL-02 Bank Stress Test Simulator")
 st.caption("Bank of Tanzania · CAR >= 12% | LCR >= 100% (HQLA / Net Cash Outflows)")
 st.caption("Click a chart card below to open it in a popup. Inside the popup, click a bar for a plain-language breakdown.")
 st.markdown(
-    "**Columns used:** `bank_name`, `tier1_capital_bn_tzs`, `tier2_capital_bn_tzs`, "
-    "`performing_loans_bn_tzs`, `npl_bn_tzs`, `credit_rwa_bn_tzs`, `market_rwa_bn_tzs`, "
-    "`operational_rwa_bn_tzs`, `hqla_bn_tzs`, `net_cash_outflows_bn_tzs`, `car_baseline_pct`"
+    "<p style='font-size:18px'><b>Columns used:</b> "
+    "<code>bank_name</code>, <code>tier1_capital_bn_tzs</code>, <code>tier2_capital_bn_tzs</code>, "
+    "<code>performing_loans_bn_tzs</code>, <code>npl_bn_tzs</code>, <code>credit_rwa_bn_tzs</code>, "
+    "<code>market_rwa_bn_tzs</code>, <code>operational_rwa_bn_tzs</code>, <code>hqla_bn_tzs</code>, "
+    "<code>net_cash_outflows_bn_tzs</code>, <code>car_baseline_pct</code></p>",
+    unsafe_allow_html=True,
 )
 
 # Sidebar
